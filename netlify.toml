@@ -1,0 +1,7 @@
+[build]
+  publish = "public" # El directorio que Netlify publicará como tu sitio estático
+  functions = "netlify-functions" # El directorio donde buscará tus funciones de Lambda
+
+[dev]
+  command = "npm run start" # Comando para iniciar tu servidor local para desarrollo
+  functions = "netlify-functions" # El directorio donde buscará tus funciones de Lambda para desarrollo local

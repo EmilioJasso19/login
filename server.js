@@ -32,9 +32,12 @@ const pool = mysql.createPool({
 });
 
 // inciar servidor
-app.listen(port, () => {
-    console.log(`El server esta corriendo en el puerto: ${port}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(port, () => {
+    console.log(`El server está corriendo en el puerto: ${port}`);
+  });
+}
+
 
 // Middleware para las sesiones
 app.use(session({
